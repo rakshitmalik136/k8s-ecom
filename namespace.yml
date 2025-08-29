@@ -2,16 +2,12 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: frontend
-
 ---
-
 kind: Namespace
 apiVersion: v1
 metadata:
   name: backend
-
 ---
-
 kind: Namespace
 apiVersion: v1
 metadata:
