@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: node-monitor
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      name: node-monitor
+  template:
+    metadata:
+      labels:
+        name: node-monitor
+    spec:
+      containers:
+      - name: monitor
+        image: busybox
+        args: ["/bin/sh", "-c", "while true; do echo Monitoring node...; sleep 60; done"]
